@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Euodia Anak Olbernt | Data Analytics &amp; IT Portfolio</title>
+<meta content="Euodia Anak Olbernt — Data Analytics, Business Intelligence, Cybersecurity and IT portfolio." name="description"/>
+<style>
+:root{--ink:#243047;--muted:#68758a;--blue:#3978ff;--purple:#8067e8;--mint:#36b99b;--yellow:#f6c453;--pink:#ee7ca8;--bg:#f7f9fc;--white:#fff;--line:#e7ebf2}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65}
+a{text-decoration:none;color:inherit}.container{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.9);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:900;letter-spacing:.5px;font-size:18px}.logo span{color:var(--blue)}
+.navlinks{display:flex;gap:26px;color:var(--muted);font-size:14px;font-weight:600}.navlinks a:hover{color:var(--blue)}
+.hero{min-height:86vh;display:flex;align-items:center;padding:90px 0;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(1px);z-index:-1}
+.hero:before{width:330px;height:330px;background:#dce8ff;right:-80px;top:80px}.hero:after{width:210px;height:210px;background:#d9f6ed;left:-70px;bottom:20px}
+.eyebrow{display:inline-block;color:var(--blue);background:#eaf0ff;padding:7px 12px;border-radius:999px;font-weight:800;letter-spacing:1px;text-transform:uppercase;font-size:12px}
+h1{font-size:clamp(48px,8vw,88px);line-height:.98;margin:20px 0 18px;letter-spacing:-3px}.hero h1 span{background:linear-gradient(90deg,var(--blue),var(--purple),var(--pink));-webkit-background-clip:text;color:transparent}
+.lead{font-size:20px;color:var(--muted);max-width:750px}.buttons{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:12px 19px;border:1px solid var(--line);border-radius:11px;background:var(--white);font-weight:800;box-shadow:0 5px 18px rgba(36,48,71,.06)}.btn.primary{color:white;border:0;background:linear-gradient(100deg,var(--blue),var(--purple))}.btn:hover{transform:translateY(-2px)}
+section{padding:88px 0;border-top:1px solid var(--line)}.section-title{font-size:36px;letter-spacing:-1px;margin-bottom:8px}.section-sub{color:var(--muted);margin-bottom:34px}
+.about{display:grid;grid-template-columns:1.25fr .75fr;gap:40px}.about p{color:var(--muted);font-size:17px}.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}.stat{padding:23px;border:1px solid var(--line);border-radius:15px;background:white;box-shadow:0 8px 25px rgba(36,48,71,.05)}.stat b{display:block;font-size:30px;color:var(--blue)}.stat span{color:var(--muted);font-size:13px}
+.timeline{border-left:2px solid #dfe6f2;padding-left:28px}.item{position:relative;margin-bottom:30px}.item:before{content:"";position:absolute;left:-35px;top:8px;width:11px;height:11px;border-radius:50%;background:var(--blue);box-shadow:0 0 0 5px #eaf0ff}.date{color:var(--blue);font-size:13px;font-weight:800}.item h3{font-size:21px;margin:5px 0}.item .org{color:var(--muted);margin-bottom:10px}.item ul{padding-left:20px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.card{background:white;border:1px solid var(--line);border-radius:17px;padding:25px;box-shadow:0 9px 28px rgba(36,48,71,.055);transition:.25s}.card:hover{transform:translateY(-4px);box-shadow:0 15px 35px rgba(36,48,71,.09)}.tag{display:inline-block;font-size:11px;padding:5px 9px;border-radius:999px;color:#4262b8;background:#eef3ff;margin-bottom:14px;font-weight:800}.card h3{font-size:21px;margin-bottom:8px}.card p{color:var(--muted);font-size:14px}.featured{grid-column:1/-1;border-top:4px solid var(--blue);background:linear-gradient(135deg,#fff,#f4f7ff)}
+.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{padding:9px 13px;border-radius:9px;background:white;border:1px solid var(--line);color:#536177;font-size:13px;font-weight:600}
+.edu{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu .card b{color:var(--blue)}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}.contact p{color:var(--muted)}.contact a{color:var(--blue);font-weight:700}
+footer{padding:30px 0;color:var(--muted);font-size:13px;border-top:1px solid var(--line);background:white}
+@media(max-width:760px){.navlinks{display:none}.hero{min-height:80vh;padding:70px 0}.about,.contact,.edu,.grid{grid-template-columns:1fr}h1{font-size:54px}.lead{font-size:17px}.featured{grid-column:auto}}
+
+.buttons .btn{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-width:145px}
+.buttons .btn.primary{min-width:175px}
+@media(max-width:760px){.buttons .btn{width:100%;min-width:0}}
+
+.hero{display:grid;grid-template-columns:1fr .9fr;gap:50px;align-items:center;min-height:86vh;padding:70px 0;position:relative;overflow:hidden}
+.hero-copy{position:relative;z-index:3}
+.hero-role{margin:0 0 22px;color:#70809c;letter-spacing:3.5px;font-size:13px;font-weight:750}
+.hero-line{width:170px;height:4px;border-radius:10px;margin-top:30px;background:linear-gradient(90deg,#3978ff,#8067e8,#ee7ca8)}
+.hero-photo{position:relative;min-height:600px;display:flex;align-items:flex-end;justify-content:center}
+.hero-photo .photo-backdrop{position:absolute;width:510px;height:510px;border-radius:50%;background:linear-gradient(145deg,#e8f0ff,#f0e8ff 58%,#e5f8f1);top:45px;left:50%;transform:translateX(-50%);z-index:0}
+.hero-photo .photo-ring{position:absolute;width:540px;height:540px;border:1px solid #d9e3f5;border-radius:50%;top:30px;left:50%;transform:translateX(-50%);z-index:0}
+.hero-photo img{position:relative;z-index:2;width:min(510px,100%);height:600px;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 18px 22px rgba(53,70,110,.12))}
+.photo-dots{position:absolute;z-index:3;right:1%;bottom:95px;width:92px;height:92px;background-image:radial-gradient(#91e7e2 2px,transparent 2px);background-size:16px 16px;opacity:.65}
+@media(max-width:760px){.hero{grid-template-columns:1fr;gap:0;padding:60px 0}.hero-photo{min-height:500px;margin-top:15px}.hero-photo img{height:500px}.hero-photo .photo-backdrop{width:390px;height:390px}.hero-photo .photo-ring{width:415px;height:415px}.photo-dots{right:3%;bottom:55px}.hero-role{letter-spacing:2px;font-size:11px}}
+
+.project-card{padding:0;overflow:hidden;cursor:pointer;position:relative}.project-image-wrap{position:relative;overflow:hidden;background:#f5f7fb}.project-image{display:block;width:100%;height:250px;object-fit:cover;object-position:center;transition:transform .35s ease}.clickable-project:hover .project-image,.clickable-project:focus .project-image{transform:scale(1.025)}.image-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(35,47,73,.48);opacity:0;transition:opacity .25s ease}.image-overlay span{background:white;color:#315fc5;padding:11px 16px;border-radius:999px;font-size:13px;font-weight:800;box-shadow:0 8px 22px rgba(0,0,0,.12)}.clickable-project:hover .image-overlay,.clickable-project:focus .image-overlay{opacity:1}.project-content{padding:25px}.project-hint{color:var(--blue)!important;font-weight:800;margin-top:14px}.project-card:focus{outline:3px solid rgba(57,120,255,.25);outline-offset:3px}.inline-project-image{display:block;width:100%;height:auto;margin-top:18px;border-radius:12px;box-shadow:0 10px 30px rgba(0,0,0,.12);background:white}
+.project-modal{display:none;position:fixed;z-index:9999;inset:0;background:rgba(13,20,34,.88);padding:30px;overflow:auto}.project-modal.open{display:flex;align-items:center;justify-content:center}.project-modal-inner{width:min(1100px,96vw);position:relative}.project-modal-close{position:absolute;right:-4px;top:-48px;border:0;background:white;color:#26344d;width:38px;height:38px;border-radius:50%;font-size:24px;line-height:1;cursor:pointer;font-weight:700}.project-gallery{display:grid;gap:18px}.project-gallery img{display:block;width:100%;height:auto;border-radius:12px;box-shadow:0 14px 45px rgba(0,0,0,.25);background:white}.project-modal-title{color:white;font-size:22px;font-weight:800;margin:0 0 18px}.project-modal-sub{color:#d9e2f2;font-size:14px;margin:-10px 0 18px}@media(max-width:760px){.project-image{height:190px}.project-modal{padding:20px}.project-modal-close{right:0;top:-48px}}
+
+.activity-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+.activity-gallery img{display:block;width:100%;height:210px;object-fit:cover;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+@media(max-width:760px){.activity-gallery{grid-template-columns:1fr}.activity-gallery img{height:auto}}
+
+.mobility-card{grid-column:1/-1}
+.mobility-gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.mobility-gallery img{width:100%;height:260px;object-fit:cover;border-radius:12px;display:block}
+@media(max-width:760px){.mobility-gallery{grid-template-columns:1fr}.mobility-gallery img{height:300px}}
+</style>
+<style>
+.internship-gallery{margin-top:22px}
+.internship-gallery-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.internship-gallery-grid img{width:100%;height:300px;object-fit:cover;border-radius:14px;display:block;box-shadow:0 8px 24px rgba(0,0,0,.10)}
+@media (max-width:700px){
+  .internship-gallery-grid{grid-template-columns:1fr}
+  .internship-gallery-grid img{height:auto;max-height:520px}
+}
+</style>
+<style>
+.ensp-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}
+.ensp-gallery figure{margin:0}
+.ensp-gallery img{width:100%;height:260px;object-fit:contain;background:#f7f7f7;border-radius:12px;display:block;box-shadow:0 6px 18px rgba(0,0,0,.08)}
+.ensp-gallery figcaption{text-align:center;font-size:.82rem;margin-top:8px;opacity:.75}
+@media(max-width:700px){.ensp-gallery{grid-template-columns:1fr}.ensp-gallery img{height:auto;max-height:520px}}
+</style>
+<style>
+:root{--ink:#14213d;--muted:#667085;--blue:#1769e0;--purple:#5b4bd8;--mint:#159a84;--bg:#f5f7fb;--white:#fff;--line:#e5e9f0}
+body{font-family:Inter,Segoe UI,Arial,sans-serif;background:#f5f7fb;color:var(--ink);line-height:1.6}
+.container{width:min(1180px,92%)}
+nav{height:72px;background:rgba(255,255,255,.94);box-shadow:0 1px 0 rgba(20,33,61,.05)}
+.nav{height:72px}.logo{font-size:20px;letter-spacing:.8px}.logo span{color:var(--blue)}
+.navlinks{gap:30px;font-size:13px}.navlinks a{transition:.2s}.navlinks a:hover{color:var(--blue)}
+.hero{min-height:calc(100vh - 72px);padding:70px 0 60px;grid-template-columns:1.08fr .92fr;gap:55px}
+.hero:before{width:360px;height:360px;background:#e5edff;right:-120px;top:70px}.hero:after{width:240px;height:240px;background:#e3f7f1;left:-100px;bottom:20px}
+.eyebrow{color:var(--blue);background:#eaf1ff;border:1px solid #dbe7ff;padding:8px 13px;font-size:11px;letter-spacing:1.2px}
+h1{font-size:clamp(52px,7vw,82px);letter-spacing:-4px;margin:22px 0 14px;color:#14213d}.hero h1 span{background:linear-gradient(90deg,#1769e0,#5b4bd8);-webkit-background-clip:text}
+.hero-role{font-size:12px;letter-spacing:2.2px;color:#63718a;margin-bottom:20px}.lead{font-size:19px;line-height:1.7;color:#59677d;max-width:700px}
+.buttons{margin-top:28px}.btn{border-radius:10px;padding:12px 20px;box-shadow:0 6px 18px rgba(20,33,61,.07);transition:.2s}.btn.primary{background:#1769e0}.btn:hover{transform:translateY(-2px)}
+.hero-line{width:120px;height:3px;background:#1769e0;margin-top:32px}
+.hero-photo{min-height:560px}.hero-photo .photo-backdrop{width:500px;height:500px;background:linear-gradient(145deg,#e8efff,#f0edff 58%,#e3f7f1)}.hero-photo .photo-ring{width:530px;height:530px}.hero-photo img{height:560px}
+section{padding:82px 0;border-top:1px solid var(--line)}.section-title{font-size:34px;letter-spacing:-1.4px}.section-title:before{content:'01  ';font-size:12px;letter-spacing:1px;color:var(--blue);font-weight:800;vertical-align:middle}.section-sub{font-size:15px;margin-bottom:30px}
+#experience .section-title:before{content:'02  '}#projects .section-title:before{content:'03  '}#skills .section-title:before{content:'04  '}#education .section-title:before{content:'05  '}#achievements .section-title:before{content:'06  '}#contact .section-title:before{content:'07  '}
+.about{grid-template-columns:1.35fr .65fr;gap:55px}.about p{font-size:16px;line-height:1.8}.stats{gap:12px}.stat{border-radius:12px;padding:20px;box-shadow:none}.stat b{font-size:28px;color:var(--blue)}
+.timeline{border-left:2px solid #dbe3ef;padding-left:30px}.item{margin-bottom:24px}.item:before{left:-37px;background:var(--blue);box-shadow:0 0 0 5px #eaf1ff}.date{font-size:12px;letter-spacing:1px}.item h3{font-size:20px}.item .org{font-size:14px}
+.grid{grid-template-columns:repeat(2,1fr);gap:20px}.card{border-radius:14px;padding:24px;box-shadow:0 8px 25px rgba(20,33,61,.045);border-color:#e1e6ee}.card h3{font-size:20px;line-height:1.35}.card p{font-size:14px;line-height:1.65}.tag{font-size:10px;letter-spacing:.4px;background:#eef4ff;color:#3564b8}.featured{border-top:4px solid var(--blue);background:linear-gradient(135deg,#fff,#f4f7ff)}
+.project-image{height:230px}.project-content{padding:22px}.project-hint{font-size:13px}
+.skills{gap:8px}.skill{padding:8px 11px;border-radius:8px;font-size:12px;background:#fff}
+.edu{grid-template-columns:repeat(2,1fr)}.contact{grid-template-columns:1.1fr .9fr}.contact a{color:var(--blue)}
+footer{background:#fff}
+@media(max-width:760px){.hero{grid-template-columns:1fr;min-height:auto;padding:60px 0 30px}.hero-photo{min-height:460px}.hero-photo img{height:460px}.hero-photo .photo-backdrop{width:390px;height:390px}.hero-photo .photo-ring{width:415px;height:415px}.about,.contact,.edu,.grid{grid-template-columns:1fr}.section-title{font-size:30px}.navlinks{display:none}.buttons .btn{width:auto}.lead{font-size:17px}}
+</style>
+<style>
+.omc-card{overflow:hidden}.omc-card .omc-image{width:100%;height:280px;object-fit:cover;border-radius:12px;margin-top:18px;display:block;box-shadow:0 8px 24px rgba(20,33,61,.10)}
+.omc-card .tag{display:inline-block;margin-bottom:8px}
+@media(max-width:760px){.omc-card .omc-image{height:auto;max-height:520px;object-fit:cover}}
+</style>
+</head>
+<body>
+<nav><div class="container nav"><a class="logo" href="#">EUODIA<span>.</span></a><div class="navlinks"><a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div></div></nav>
+<header class="container hero">
+<div class="hero-copy">
+<div class="eyebrow">DATA ANALYTICS  •  BUSINESS INTELLIGENCE  •  CYBERSECURITY</div>
+<h1>Euodia<br/><span>Anak Olbernt</span></h1>
+<p class="hero-role">BACHELOR OF INFORMATION TECHNOLOGY (HONS)  |  DATA ANALYTICS</p>
+<p class="lead">Transforming data into actionable insights through Business Intelligence, automation, and AI-driven solutions, with hands-on experience in Power BI, Power Apps, Python, Scikit-learn, SQL, and cybersecurity.</p>
+<div class="hero-line"></div>
+<div class="buttons"><a class="btn primary" href="#projects">View My Work</a><a class="btn" href="#contact">Let’s Connect</a></div></div>
+<div class="hero-photo">
+<div class="photo-backdrop"></div>
+<div class="photo-ring"></div>
+<img alt="Euodia Anak Olbernt — professional profile photo" src="images/image-01.png"/>
+<div class="photo-dots"></div>
+</div>
+</header>
+<section id="about"><div class="container"><h2 class="section-title">About Me</h2><p class="section-sub">Turning data, technology and analytical thinking into practical solutions.</p>
+<div class="about"><div><p>Final-year Bachelor of Information Technology (Hons) student at Universiti Teknologi PETRONAS (UTP), specialising in Data Analytics with a minor in Financial Management. I combine analytics, business understanding and practical IT skills to build solutions that improve visibility and efficiency.</p><p style="margin-top:18px">My experience covers dashboard development, reporting automation, data analysis, machine learning, databases, networking and web applications. I am open to entry-level roles in Data Analytics, Business Intelligence, Cybersecurity, QA/Software Testing and IT.</p></div>
+<div class="stats"><div class="stat"><b>3.29</b><span>Current CGPA</span></div><div class="stat"><b>December 2026</b><span>Expected graduation</span></div><div class="stat"><b>7+</b><span>Technical projects</span></div><div class="stat"><b>3</b><span>Languages</span></div></div></div></div></section>
+<section id="experience"><div class="container"><h2 class="section-title">Experience</h2><p class="section-sub">Industrial experience at Malaysia LNG Sdn. Bhd. (PETRONAS).</p>
+<div class="timeline"><div class="item"><div class="date">SEP 2025 — APR 2026</div><h3>Industrial Internship — Operational Excellence</h3>
+<div class="internship-gallery">
+<div class="internship-gallery-grid">
+<img alt="Industrial Internship photo 1" src="images/image-02.png"/>
+<img alt="Industrial Internship photo 2" src="images/image-03.png"/>
+<img alt="Industrial Internship photo 3" src="images/image-04.png"/>
+<img alt="Industrial Internship photo 4" src="images/image-05.png"/>
+</div>
+</div>
+<div class="org">Malaysia LNG Sdn. Bhd. (PETRONAS)</div><ul><li>Developed Power BI dashboards with Excel integration to track departmental budgets, expenditures and financial KPIs.</li><li>Built an attendance tracking solution using Power BI, Power Apps, Power Automate and SharePoint, automating data collection and reporting workflows.</li><li>Completed Lean Six Sigma Yellow Belt Certification Training.</li></ul></div></div></div></section>
+<section id="projects"><div class="container"><h2 class="section-title">Selected Projects</h2><p class="section-sub">A selection of academic and technical work.</p>
+<div class="grid">
+<div aria-label="View Superstore Intelligence Dashboard project" class="card project-card clickable-project" onclick="openSuperstoreProject()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openSuperstoreProject();}" role="button" tabindex="0">
+<div class="project-image-wrap"><img alt="Superstore Intelligence Dashboard built with Streamlit and Plotly" class="project-image" src="images/image-06.png"/></div>
+<span class="tag">BUSINESS INTELLIGENCE • DATA VISUALIZATION</span><h3>Superstore Intelligence Dashboard</h3><p>Developed an interactive <strong>Business Intelligence dashboard</strong> using Streamlit and Plotly to analyze 9,983 e-commerce transactions.</p><p class="project-hint">View project →</p>
+</div>
+<div class="card featured"><span class="tag">FINAL YEAR PROJECT • AI / CYBERSECURITY</span><h3>AI for Automated Cyber Threat Detection &amp; Legal Compliance Monitoring</h3><p>Developing an AI-based network cyber threat detection system using Python, Scikit-learn and the CICIDS2017 dataset, with a Flask web dashboard using HTML, CSS, JavaScript and MySQL for threat monitoring and compliance reporting.</p>
+<div class="project-gallery">
+<img alt="AI CyberGuard Security Dashboard" src="images/image-07.png"/>
+</div></div>
+<div aria-label="View Retail Sales Forecasting and Customer Churn Prediction project" class="card project-card clickable-project" onclick="openRetailProject()" onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openRetailProject();}" role="button" tabindex="0">
+<div class="project-image-wrap"><img alt="Retail Sales Forecasting using Customer Purchase Behaviour project presentation cover" class="project-image" src="images/image-08.png"/><div class="image-overlay"><span>Click to view project</span></div></div>
+<div class="project-content"><span class="tag">DATA MINING</span><h3>Retail Sales Forecasting &amp; Customer Churn Prediction</h3><p>Developed Random Forest classification and regression models using Python, Pandas, NumPy, Scikit-learn and Matplotlib.</p><p class="project-hint">View project →</p></div>
+</div>
+<div class="card"><span class="tag">DATA VISUALIZATION</span><h3>MY E-Commerce COVID-19 Dashboard</h3><img alt="MY E-Commerce COVID-19 Analytics dashboard preview" class="ecommerce-dashboard-preview" loading="lazy" src="images/image-09.png"/><p>Analysed 2,400 e-commerce orders using D3.js, JavaScript, HTML and CSS to uncover sales, inventory, delivery and customer trends.</p></div>
+<div class="card"><span class="tag">WEB APPLICATION</span><h3>Parcel Delivery Management System</h3><p>Created a web-based parcel management system using HTML, CSS and JavaScript with real-time tracking and courier-management features.</p></div>
+<div class="card"><span class="tag">DATABASE</span><h3>Recipe Management Database</h3><p>Designed an Oracle SQL database, ERD, relational schema and complex queries covering recipes, reviews, favourites, comments and nutrition data.</p></div>
+<div class="card"><span class="tag">MOBILE • BI</span><h3>DisasterAlert Emergency Response System</h3><p>Developed a React Native mobile application and Power BI dashboard integrating GPS incident reporting, real-time alerts and external disaster-data APIs.</p><img alt="FloodAware Power BI dashboard showing weather conditions, temperature, rainfall, wind speed and soil moisture analysis over the last 7 days" class="inline-project-image" src="images/image-10.png"/></div>
+<div class="card"><span class="tag">NETWORKING</span><h3>Huawei eNSP Network Simulation</h3><p>Configured and simulated network environments using Huawei eNSP to implement, test and analyse communication protocols.</p><div class="ensp-gallery">
+<figure><img alt="Huawei eNSP network topology simulation" src="images/image-11.png"/><figcaption>Network Topology Simulation</figcaption></figure>
+<figure><img alt="Huawei eNSP TFTP configuration and Client1 IPv4 settings" src="images/image-12.png"/><figcaption>TFTP Configuration &amp; Client Setup</figcaption></figure>
+</div></div>
+</div></div></section>
+<section id="skills"><div class="container"><h2 class="section-title">Technical Skills</h2><p class="section-sub">Tools and technologies from my academic and professional experience.</p>
+<div class="skills"><span class="skill">Python</span><span class="skill">C++</span><span class="skill">Java</span><span class="skill">JavaScript</span><span class="skill">PHP</span><span class="skill">Visual Basic</span><span class="skill">HTML</span><span class="skill">CSS</span><span class="skill">Scikit-learn</span><span class="skill">Pandas</span><span class="skill">NumPy</span><span class="skill">Matplotlib</span><span class="skill">RStudio</span><span class="skill">Data Mining</span><span class="skill">Power BI</span><span class="skill">Microsoft Excel</span><span class="skill">Power Apps</span><span class="skill">Power Automate</span><span class="skill">SharePoint</span><span class="skill">Streamlit</span><span class="skill">Google Colab</span><span class="skill">Kaggle</span><span class="skill">Oracle SQL</span><span class="skill">MySQL</span><span class="skill">MySQL Workbench</span><span class="skill">Flask</span><span class="skill">Huawei eNSP</span><span class="skill">TCP/IP</span><span class="skill">Routing &amp; Switching</span><span class="skill">AWS</span></div></div></section>
+<section id="education"><div class="container"><h2 class="section-title">Education</h2><p class="section-sub">Universiti Teknologi PETRONAS.</p>
+<div class="edu"><div class="card"><b>SEP 2023 — DEC 2026</b><h3 style="margin-top:8px">Bachelor of Information Technology (Hons)</h3><p>Data Analytics, Minor in Financial Management<br/>Current CGPA: 3.29</p></div><div class="card"><b>SEP 2022 — AUG 2023</b><h3 style="margin-top:8px">Foundation in Information Technology</h3><p>CGPA: 3.14</p></div></div></div></section>
+<section id="achievements"><div class="container"><h2 class="section-title">Leadership &amp; Achievements</h2><p class="section-sub">Beyond academics.</p>
+<div class="grid"><div class="card"><h3>STEMGENUITY</h3><p>Assistant Head, Sponsorship Department. Negotiated with potential sponsors and secured sponsorships that reduced projected expenditure by 50%.</p><div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px;"><img alt="STEMGENUITY event photo" src="images/image-13.png" style="width:100%;height:260px;object-fit:cover;border-radius:12px;display:block;"/><img alt="STEMGENUITY event photo" src="images/image-14.png" style="width:100%;height:260px;object-fit:cover;border-radius:12px;display:block;"/></div></div><div class="card omc-card">
+<span class="tag">LEADERSHIP • PROGRAMMING</span><h3>Head of Operations, Oh My Code (OMC) Programming Competition</h3>
+<p>Led the operations team in developing <strong>DeliverUs</strong>, a digital parcel delivery solution aimed at improving campus delivery efficiency and student convenience.</p>
+<img class="omc-image" alt="Oh My Code programming competition team presenting the DeliverUs digital parcel delivery solution" src="images/image-15.jpg"/>
+</div>
+<div class="card">
+<h3>FEXES 2.0</h3>
+<p>Director of Finance. Led budget planning, expense tracking and financial reporting.</p>
+<div class="activity-gallery">
+<img alt="FEXES 2.0 event group photo" src="images/image-16.png"/>
+<img alt="Croffellicious FEXES 2.0 project social media page" src="images/image-17.png"/>
+</div>
+</div><div class="card">
+<h3>Debat Alam Sekitar 2025</h3>
+<p>Assistant Head, Food &amp; Beverage Department, supporting planning and on-ground operations.</p>
+<div class="activity-gallery">
+<img alt="Euodia Anak Olbernt at Debat Alam Sekitar 2025 final competition" src="images/image-18.png"/>
+<img alt="Debat Alam Sekitar 2025 Assistant Head appointment" src="images/image-19.png"/>
+</div>
+</div><div class="card"><h3>Cheonan World Dance Festival 2024</h3><p>Bronze Prize — Folk Dance Category, Korea.</p><div class="activity-gallery">
+<img alt="Cheonan World Dance Festival 2024 Bronze Prize" src="images/image-20.png"/>
+<img alt="UTP delegation at KLIA for Cheonan World Dance Festival 2024" src="images/image-21.png"/>
+</div></div>
+<div class="card mobility-card">
+<span class="tag">STUDENT MOBILITY • INDONESIA • 2026</span>
+<h3>UTP Student Mobility Programme 2026 — Indonesia</h3>
+<p>Participated in the UTP Student Mobility Programme 2026 at University Brawijaya, Indonesia, gaining academic and cross-cultural exposure through the programme. The experience also included a sightseeing visit to Bromo, Indonesia.</p>
+<div class="mobility-gallery">
+<img alt="UTP Student Mobility Programme 2026 group at University Brawijaya, Indonesia" src="images/utp-student-mobility-indonesia-group.jpg"/>
+<img alt="University Brawijaya memento from the student mobility programme" src="images/university-brawijaya-memento.jpg"/>
+<img alt="Bromo, Indonesia during the student mobility programme" src="images/bromo-indonesia.jpg"/>
+</div>
+</div>
+</div></div></section>
+<section id="contact"><div class="container"><h2 class="section-title">Let's Connect</h2><p class="section-sub">Looking for a graduate opportunity where I can turn data and technology into measurable business value.</p>
+<div class="contact"><div><h3>Euodia Anak Olbernt</h3><p style="margin-top:8px">Bintulu, Sarawak, Malaysia</p></div><div><p>Phone: <a href="tel:+601112008096">+6011-12008096</a></p><p>Email: <a href="mailto:euodiakumang@gmail.com">euodiakumang@gmail.com</a></p><p>LinkedIn: <a href="https://linkedin.com/in/euodia-olbernt" target="_blank">linkedin.com/in/euodia-olbernt</a></p></div></div></div></section>
+<footer><div class="container">© 2026 Euodia Anak Olbernt. Built for a career in data, technology and innovation.</div></footer>
+<div aria-hidden="true" aria-label="Superstore Intelligence Dashboard project" aria-modal="true" class="project-modal" id="superstoreProjectModal" onclick="if(event.target===this)closeSuperstoreProject()" role="dialog">
+<div class="project-modal-inner">
+<button aria-label="Close project" class="project-modal-close" onclick="closeSuperstoreProject()" type="button">×</button>
+<div class="project-modal-title">Superstore Intelligence Dashboard</div>
+<div class="project-modal-sub">Interactive Business Intelligence dashboard · Streamlit + Plotly · 9,983 e-commerce transactions</div>
+<div class="project-gallery">
+<img alt="Superstore Intelligence Dashboard built with Streamlit and Plotly" src="images/image-22.png"/>
+</div>
+<div style="margin-top:18px;background:white;border-radius:12px;padding:18px;box-shadow:0 14px 45px rgba(0,0,0,.25);">
+<h3 style="margin:0 0 8px;color:#16213E;">Project Description</h3>
+<p style="margin:0 0 14px;color:#44506A;">Developed an interactive <strong>Business Intelligence dashboard</strong> using Streamlit and Plotly to analyze 9,983 e-commerce transactions.</p>
+<details>
+<summary style="cursor:pointer;font-weight:700;color:#16213E;">View GroupProjectDV.py</summary>
+<pre style="margin-top:12px;max-height:520px;overflow:auto;background:#F6F7FB;padding:14px;border-radius:8px;font-size:12px;line-height:1.45;white-space:pre-wrap;">"""
+Superstore Intelligence Dashboard
+E-Commerce domain | Built with Streamlit + Plotly
+Run with: streamlit run app.py
+"""
+
+import streamlit as st
+import pandas as pd
+import plotly.express as px
+import plotly.graph_objects as go
+from datetime import datetime
+
+# ============================================================
+# PAGE CONFIG
+# ============================================================
+st.set_page_config(
+    page_title="Superstore Intelligence Dashboard",
+    page_icon="📊",
+    layout="wide",
+    initial_sidebar_state="expanded"
+)
+
+NAVY = "#16213E"
+AMBER = "#E8A33D"
+PROFIT = "#2F9E5B"
+LOSS = "#D64550"
+CAT_COLORS = {"Furniture": NAVY, "Office Supplies": AMBER, "Technology": PROFIT}
+
+# ============================================================
+# LOAD DATA
+# ============================================================
+@st.cache_data
+def load_data():
+    df = pd.read_csv("superstore_dataset.csv")
+    df["Order Date"] = pd.to_datetime(df["Order Date"])
+    df["Ship Date"] = pd.to_datetime(df["Ship Date"])
+    df["Year"] = df["Order Date"].dt.year
+    df["Month"] = df["Order Date"].dt.to_period("M").astype(str)
+    return df
+
+df = load_data()
+
+# ============================================================
+# SESSION STATE
+# ============================================================
+if "mode" not in st.session_state:
+    st.session_state.mode = "Standard View"
+if "drill_category" not in st.session_state:
+    st.session_state.drill_category = None
+
+# ============================================================
+# MODE-BASED STYLING (User-Centered Design)
+# ============================================================
+def inject_css(mode):
+    base_font = "16px"
+    if mode == "Large Text View":
+        base_font = "21px"
+    elif mode == "Simple View":
+        base_font = "18px"
+
+    st.markdown(f"""
+    &lt;style&gt;
+    html, body, [class*="css"]  {{
+        font-size: {base_font};
+    }}
+    .kpi-card {{
+        background:#fff; border:1px solid #E2E5EE; border-radius:14px;
+        padding:16px 18px; text-align:center;
+    }}
+    .kpi-label {{ font-size:0.75em; color:#5B6584; font-weight:600; text-transform:uppercase; letter-spacing:0.04em; }}
+    .kpi-value {{ font-size:1.6em; font-weight:700; color:{NAVY}; margin-top:4px; }}
+    .insight-box {{
+        background:#FFF7E8; border:1px solid #F1D9A6; border-radius:10px;
+        padding:12px 14px; margin-bottom:10px; font-size:0.95em; color:#7A5A1B;
+    }}
+    .stButton button {{ border-radius:10px; font-weight:600; }}
+    &lt;/style&gt;
+    """, unsafe_allow_html=True)
+
+inject_css(st.session_state.mode)
+
+# ============================================================
+# TOP BAR
+# ============================================================
+top_left, top_right = st.columns([3, 2])
+with top_left:
+    st.markdown(f"&lt;h1 style='color:{NAVY}; margin-bottom:0;'&gt;📊 Superstore Intelligence&lt;/h1&gt;", unsafe_allow_html=True)
+    st.caption("E-Commerce Performance Dashboard · Sample Superstore dataset, 2015–2018")
+with top_right:
+    st.session_state.mode = st.radio(
+        "Display mode",
+        ["Simple View", "Standard View", "Large Text View"],
+        index=["Simple View", "Standard View", "Large Text View"].index(st.session_state.mode),
+        horizontal=True,
+        label_visibility="collapsed"
+    )
+
+mode = st.session_state.mode
+st.divider()
+
+# ============================================================
+# SIDEBAR FILTERS (hidden in Simple View)
+# ============================================================
+regions_all = sorted(df["Region"].unique())
+categories_all = sorted(df["Category"].unique())
+segments_all = sorted(df["Segment"].unique())
+years_all = sorted(df["Year"].unique())
+
+def _init_filter_state():
+    defaults = {"f_regions": [], "f_categories": [], "f_segments": [], "f_years": [], "f_state": ""}
+    for k, v in defaults.items():
+        if k not in st.session_state:
+            st.session_state[k] = v
+
+_init_filter_state()
+
+def _clear_filters():
+    st.session_state.drill_category = None
+    st.session_state.f_regions = []
+    st.session_state.f_categories = []
+    st.session_state.f_segments = []
+    st.session_state.f_years = []
+    st.session_state.f_state = ""
+
+if mode != "Simple View":
+    with st.sidebar:
+        st.header("Filters")
+        f_regions = st.multiselect("Region", regions_all, key="f_regions")
+        f_categories = st.multiselect("Category", categories_all, key="f_categories")
+        f_segments = st.multiselect("Customer Segment", segments_all, key="f_segments")
+        f_years = st.multiselect("Order Year", years_all, key="f_years")
+        f_state = st.text_input("Search state", key="f_state")
+        st.button("Clear all filters", on_click=_clear_filters)
+else:
+    # Simple View: one big category picker instead of a filter sidebar
+    f_regions, f_segments, f_years, f_state = [], [], [], ""
+    icons = {"Furniture": "🪑", "Office Supplies": "📎", "Technology": "💻"}
+    st.markdown("### Pick a category")
+    cols = st.columns(len(categories_all) + 1)
+    picked = None
+    if cols[0].button("🛒 Everything", use_container_width=True):
+        picked = []
+    for i, cat in enumerate(categories_all):
+        if cols[i + 1].button(f"{icons.get(cat,'📦')} {cat}", use_container_width=True):
+            picked = [cat]
+    if "simple_cat" not in st.session_state:
+        st.session_state.simple_cat = []
+    if picked is not None:
+        st.session_state.simple_cat = picked
+    f_categories = st.session_state.simple_cat
+
+# ============================================================
+# APPLY FILTERS
+# ============================================================
+filtered = df.copy()
+if f_regions:
+    filtered = filtered[filtered["Region"].isin(f_regions)]
+if f_categories:
+    filtered = filtered[filtered["Category"].isin(f_categories)]
+if f_segments:
+    filtered = filtered[filtered["Segment"].isin(f_segments)]
+if f_years:
+    filtered = filtered[filtered["Year"].isin(f_years)]
+if f_state:
+    filtered = filtered[filtered["State"].str.contains(f_state, case=False, na=False)]
+
+# ============================================================
+# KPI CARDS
+# ============================================================
+total_sales = filtered["Sales"].sum()
+total_profit = filtered["Profit"].sum()
+total_orders = len(filtered)
+margin = (total_profit / total_sales * 100) if total_sales else 0
+avg_discount = filtered["Discount"].mean() * 100 if total_orders else 0
+
+if mode == "Simple View":
+    c1, c2, c3 = st.columns(3)
+    cards = [
+        ("💰 Money Made", f"${total_sales:,.0f}"),
+        ("📦 Orders Sold", f"{total_orders:,}"),
+        ("📈 Profit", f"${total_profit:,.0f}"),
+    ]
+    for col, (label, value) in zip([c1, c2, c3], cards):
+        col.markdown(f"&lt;div class='kpi-card'&gt;&lt;div class='kpi-label'&gt;{label}&lt;/div&gt;"
+                      f"&lt;div class='kpi-value'&gt;{value}&lt;/div&gt;&lt;/div&gt;", unsafe_allow_html=True)
+else:
+    c1, c2, c3, c4, c5 = st.columns(5)
+    cards = [
+        ("Total Sales", f"${total_sales:,.0f}"),
+        ("Total Profit", f"${total_profit:,.0f}"),
+        ("Total Orders", f"{total_orders:,}"),
+        ("Avg Discount", f"{avg_discount:.1f}%"),
+        ("Profit Margin", f"{margin:.1f}%"),
+    ]
+    for col, (label, value) in zip([c1, c2, c3, c4, c5], cards):
+        col.markdown(f"&lt;div class='kpi-card'&gt;&lt;div class='kpi-label'&gt;{label}&lt;/div&gt;"
+                      f"&lt;div class='kpi-value'&gt;{value}&lt;/div&gt;&lt;/div&gt;", unsafe_allow_html=True)
+
+st.write("")
+
+if filtered.empty:
+    st.warning("No orders match these filters. Try clearing a filter.")
+    st.stop()
+
+# ============================================================
+# ROW 1: Category/Sub-category drill-down bar  +  Monthly trend
+# ============================================================
+row1_left, row1_right = st.columns(2)
+
+with row1_left:
+    if mode != "Simple View":
+        drill_options = ["All categories"] + categories_all
+        chosen = st.selectbox("Drill into a category", drill_options,
+                               index=0 if not st.session_state.drill_category
+                               else drill_options.index(st.session_state.drill_category))
+        st.session_state.drill_category = None if chosen == "All categories" else chosen
+
+    if st.session_state.drill_category and mode != "Simple View":
+        sub = filtered[filtered["Category"] == st.session_state.drill_category]
+        grouped = sub.groupby("Sub-Category")[["Sales", "Profit"]].sum().reset_index()
+        grouped = grouped.sort_values("Sales", ascending=False)
+        title = f"{st.session_state.drill_category}: Sales &amp; Profit by Sub-Category"
+        x_col = "Sub-Category"
+    else:
+        grouped = filtered.groupby("Category")[["Sales", "Profit"]].sum().reset_index()
+        grouped = grouped.sort_values("Sales", ascending=False)
+        title = "Sales &amp; Profit by Category"
+        x_col = "Category"
+
+    fig_bar = go.Figure()
+    fig_bar.add_bar(x=grouped[x_col], y=grouped["Sales"], name="Sales", marker_color=NAVY)
+    fig_bar.add_bar(x=grouped[x_col], y=grouped["Profit"], name="Profit",
+                     marker_color=[PROFIT if v &gt;= 0 else LOSS for v in grouped["Profit"]])
+    fig_bar.update_layout(title=title, barmode="group", height=380,
+                           legend=dict(orientation="h", y=1.1),
+                           margin=dict(t=60, b=40))
+    st.plotly_chart(fig_bar, use_container_width=True)
+
+with row1_right:
+    monthly = filtered.groupby("Month")["Sales"].sum().reset_index().sort_values("Month")
+    fig_line = px.area(monthly, x="Month", y="Sales", title="Monthly Sales Trend")
+    fig_line.update_traces(line_color=NAVY, fillcolor="rgba(22,33,62,0.15)")
+    fig_line.update_layout(height=380, margin=dict(t=60, b=40))
+    fig_line.update_xaxes(rangeslider_visible=(mode != "Simple View"))
+    st.plotly_chart(fig_line, use_container_width=True)
+
+# ============================================================
+# ADVANCED VIEWS (hidden in Simple View)
+# ============================================================
+if mode != "Simple View":
+
+    st.markdown("### Advanced Visualizations")
+    row2_left, row2_right = st.columns(2)
+
+    # --- Heat map: Region x Category profit margin ---
+    with row2_left:
+        st.markdown("**Profit Margin Heat Map** — Region vs Category")
+        pivot_sales = filtered.pivot_table(index="Region", columns="Category", values="Sales", aggfunc="sum", fill_value=0)
+        pivot_profit = filtered.pivot_table(index="Region", columns="Category", values="Profit", aggfunc="sum", fill_value=0)
+        pivot_margin = (pivot_profit / pivot_sales.replace(0, pd.NA) * 100).fillna(0)
+
+        fig_heat = px.imshow(
+            pivot_margin, text_auto=".1f", color_continuous_scale=["#D64550", "#F6F7FB", "#2F9E5B"],
+            color_continuous_midpoint=0, aspect="auto", labels=dict(color="Margin %")
+        )
+        fig_heat.update_layout(height=340, margin=dict(t=20, b=20))
+        st.plotly_chart(fig_heat, use_container_width=True)
+
+    # --- Parallel coordinates: Sales, Quantity, Discount, Profit ---
+    with row2_right:
+        st.markdown("**Sales · Quantity · Discount · Profit** — Parallel Coordinates")
+        sample = filtered.sample(min(700, len(filtered)), random_state=1).copy()
+        sample["CategoryCode"] = sample["Category"].map({c: i for i, c in enumerate(categories_all)})
+        fig_pc = px.parallel_coordinates(
+            sample,
+            dimensions=["Sales", "Quantity", "Discount", "Profit"],
+            color="CategoryCode",
+            color_continuous_scale=[CAT_COLORS[c] for c in categories_all],
+        )
+        fig_pc.update_layout(height=340, margin=dict(t=20, b=20), coloraxis_showscale=False)
+        st.plotly_chart(fig_pc, use_container_width=True)
+        legend_html = " &amp;nbsp; ".join(
+            f"&lt;span style='color:{CAT_COLORS[c]}'&gt;●&lt;/span&gt; {c}" for c in categories_all
+        )
+        st.markdown(legend_html, unsafe_allow_html=True)
+
+    # ============================================================
+    # ROW 3: Top states + Insights
+    # ============================================================
+    row3_left, row3_right = st.columns(2)
+
+    with row3_left:
+        st.markdown("**Top 10 States by Sales**")
+        by_state = filtered.groupby("State")[["Sales", "Profit"]].sum().reset_index()
+        by_state = by_state.sort_values("Sales", ascending=False).head(10)
+        fig_state = px.bar(
+            by_state.sort_values("Sales"), x="Sales", y="State", orientation="h",
+            color=by_state.sort_values("Sales")["Profit"] &gt;= 0,
+            color_discrete_map={True: NAVY, False: LOSS},
+        )
+        fig_state.update_layout(height=340, showlegend=False, margin=dict(t=20, b=20))
+        st.plotly_chart(fig_state, use_container_width=True)
+
+    with row3_right:
+        st.markdown("**Generated Insights**")
+
+        insights = []
+        by_cat = filtered.groupby("Category")[["Sales", "Profit"]].sum()
+        by_cat["margin"] = by_cat["Profit"] / by_cat["Sales"] * 100
+        worst_cat = by_cat["margin"].idxmin()
+        if by_cat.loc[worst_cat, "margin"] &lt; 5:
+            insights.append(f"**{worst_cat}** runs the thinnest margin at {by_cat.loc[worst_cat,'margin']:.1f}%. Check discount levels here first.")
+
+        by_sub = filtered.groupby("Sub-Category").agg(Profit=("Profit", "sum"), Discount=("Discount", "mean"))
+        loss_subs = by_sub[by_sub["Profit"] &lt; 0].sort_values("Profit")
+        if len(loss_subs):
+            top_loss = loss_subs.index[0]
+            insights.append(f"**{top_loss}** loses money overall (${loss_subs.loc[top_loss,'Profit']:,.2f}), averaging {loss_subs.loc[top_loss,'Discount']*100:.1f}% discount. Cutting the discount here could turn it profitable.")
+
+        by_region = filtered.groupby("Region")[["Sales", "Profit"]].sum()
+        by_region["margin"] = by_region["Profit"] / by_region["Sales"] * 100
+        best_region = by_region["margin"].idxmax()
+        insights.append(f"**{best_region}** region holds the strongest margin at {by_region.loc[best_region,'margin']:.1f}%. Worth pushing more inventory there.")
+
+        dec_sales = filtered[filtered["Order Date"].dt.month == 12]
+        if not dec_sales.empty:
+            dec_by_year = dec_sales.groupby("Year")["Sales"].sum()
+            if len(dec_by_year) &gt; 0:
+                insights.append(f"Sales peak every December, averaging ${dec_by_year.mean():,.0f} that month. Plan stock and staffing ahead of year end.")
+
+        high_disc_loss = filtered[(filtered["Discount"] &gt;= 0.3) &amp; (filtered["Profit"] &lt; 0)]
+        if len(high_disc_loss):
+            pct = len(high_disc_loss) / len(filtered) * 100
+            insights.append(f"{len(high_disc_loss)} orders ({pct:.1f}% of current view) used a discount of 30% or more and still lost money. Review the discount policy above this threshold.")
+
+        if not insights:
+            insights.append("This slice of the data looks healthy. No major risk flags found.")
+
+        for i in insights:
+            st.markdown(f"&lt;div class='insight-box'&gt;{i}&lt;/div&gt;", unsafe_allow_html=True)
+
+# ============================================================
+# TIMELINE
+# ============================================================
+st.markdown("### Project Progress Timeline")
+
+phases = pd.DataFrame([
+    dict(Phase="Project Initiation", Start="2025-11-03", Finish="2025-11-14",
+         Desc="Defined the business problem, picked the e-commerce domain, and assigned roles across the team."),
+    dict(Phase="Data Collection", Start="2025-11-17", Finish="2026-01-16",
+         Desc="Sourced the Sample Superstore dataset covering 9,983 orders from 2015 to 2018."),
+    dict(Phase="Data Cleaning", Start="2026-01-19", Finish="2026-02-13",
+         Desc="Removed rows with missing postal codes, standardized date formats, rounded currency fields."),
+    dict(Phase="Dashboard Development", Start="2026-02-16", Finish="2026-05-22",
+         Desc="Built the Streamlit + Plotly dashboard: KPIs, filters, drill-down, trend line, heat map, parallel coordinates."),
+    dict(Phase="Testing and Validation", Start="2026-05-25", Finish="2026-07-17",
+         Desc="Checked every chart against manual calculations, tested all three user modes, fixed filter edge cases."),
+    dict(Phase="Deployment / Presentation", Start="2026-07-20", Finish="2026-07-24",
+         Desc="Packaged source files, wrote the report and poster, rehearsed the live demo for Week 11."),
+])
+phases["Start"] = pd.to_datetime(phases["Start"])
+phases["Finish"] = pd.to_datetime(phases["Finish"])
+
+fig_tl = px.timeline(
+    phases, x_start="Start", x_end="Finish", y="Phase", color="Phase",
+    color_discrete_sequence=["#16213E", "#2F4170", "#4A639F", "#E8A33D", "#2F9E5B", "#D64550"],
+)
+fig_tl.update_yaxes(autorange="reversed", title="")
+fig_tl.update_layout(height=280, showlegend=False, margin=dict(t=10, b=10))
+st.plotly_chart(fig_tl, use_container_width=True)
+
+with st.expander("See phase details"):
+    for _, row in phases.iterrows():
+        st.markdown(f"**{row['Phase']}** · {row['Start'].strftime('%b %d')}–{row['Finish'].strftime('%b %d, %Y')}  \n{row['Desc']}")
+
+st.caption("Sample Superstore Dataset · 9,983 orders · 2015–2018 · Built with Streamlit + Plotly")</pre>
+</details>
+</div>
+</div>
+</div>
+<div aria-hidden="true" aria-label="Retail Sales Forecasting and Customer Churn Prediction project" aria-modal="true" class="project-modal" id="retailProjectModal" onclick="if(event.target===this)closeRetailProject()" role="dialog">
+<div class="project-modal-inner">
+<button aria-label="Close project" class="project-modal-close" onclick="closeRetailProject()" type="button">×</button>
+<div class="project-modal-title">Retail Sales Forecasting &amp; Customer Churn Prediction</div>
+<div class="project-modal-sub">Project presentation and key model findings</div>
+<div class="project-gallery">
+<img alt="Project presentation cover" src="images/image-23.png"/>
+<img alt="Exploration findings: churn by income and correlation heatmap" src="images/image-24.png"/>
+<img alt="Classification results: accuracy, confusion matrix and feature importances" src="images/image-25.png"/>
+</div>
+</div>
+</div>
+<script>
+function openSuperstoreProject(){
+  const modal=document.getElementById('superstoreProjectModal');
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeSuperstoreProject(){
+  const modal=document.getElementById('superstoreProjectModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+function openRetailProject(){
+  const modal=document.getElementById('retailProjectModal');
+  modal.classList.add('open');
+  modal.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeRetailProject(){
+  const modal=document.getElementById('retailProjectModal');
+  modal.classList.remove('open');
+  modal.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeRetailProject();});
+</script>
+<style>
+/* E-commerce dashboard preview */
+.ecommerce-dashboard-preview {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1880 / 836;
+  object-fit: cover;
+  border-radius: 12px;
+  margin: 14px 0 16px;
+  border: 1px solid rgba(15, 23, 42, .12);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .08);
+  background: #f8fafc;
+}
+@media (max-width: 700px) {
+  .ecommerce-dashboard-preview { margin: 12px 0 14px; border-radius: 9px; }
+}
+</style></body></html>
